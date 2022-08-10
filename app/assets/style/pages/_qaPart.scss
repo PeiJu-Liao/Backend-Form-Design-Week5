@@ -29,6 +29,7 @@
     }
   }
 
+  // Student & Teacher
   &__student,
   &__teacher {
 
@@ -38,22 +39,28 @@
       height: 2.5rem;
     }
 
+    &-content {
+      font-size: 0.875rem; //14px
+    }
+  }
+
+  // Student Part
+  &__student {
+    &-imgS {
+      background: url('../../assets/images/emilywang.jpeg') center / cover;
+    }
+
     &-file {
       &:hover {
         box-shadow: 2px 4px 8px $gray-600;
       }
     }
+  }
 
-    &-imgS {
-      background: url('../../assets/images/emilywang.jpeg') center / cover;
-    }
-
+  // Teacher Part
+  &__teacher {
     &-imgT {
       background: url('../../assets/images/andychen.jpeg') center/ cover;
-    }
-
-    &-content {
-      font-size: 0.875rem; //14px
     }
 
     &-comment {
