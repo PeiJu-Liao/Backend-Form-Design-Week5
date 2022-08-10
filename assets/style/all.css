@@ -1130,24 +1130,24 @@ main {
   height: 2.5rem;
 }
 
-.qaPart__student-file:hover, .qaPart__teacher-file:hover {
-  -webkit-box-shadow: 2px 4px 8px #6C757D;
-          box-shadow: 2px 4px 8px #6C757D;
-}
-
-.qaPart__student-imgS, .qaPart__teacher-imgS {
-  background: url("../../assets/images/emilywang.jpeg") center/cover;
-}
-
-.qaPart__student-imgT, .qaPart__teacher-imgT {
-  background: url("../../assets/images/andychen.jpeg") center/cover;
-}
-
 .qaPart__student-content, .qaPart__teacher-content {
   font-size: 0.875rem;
 }
 
-.qaPart__student-comment li, .qaPart__teacher-comment li {
+.qaPart__student-imgS {
+  background: url("../../assets/images/emilywang.jpeg") center/cover;
+}
+
+.qaPart__student-file:hover {
+  -webkit-box-shadow: 2px 4px 8px #6C757D;
+          box-shadow: 2px 4px 8px #6C757D;
+}
+
+.qaPart__teacher-imgT {
+  background: url("../../assets/images/andychen.jpeg") center/cover;
+}
+
+.qaPart__teacher-comment li {
   text-indent: 1rem;
 }
 
