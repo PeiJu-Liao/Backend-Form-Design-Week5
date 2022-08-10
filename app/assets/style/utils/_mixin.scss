@@ -1,9 +1,0 @@
-@mixin hoverStyle($color, $scale) {
-  &:any-link {
-    color: $color
-  }
-
-  & {
-    transform: scale($scale);
-  }
-}

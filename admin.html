@@ -1,10 +1,86 @@
----
-title: Admin
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    Admin
+  </title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <!-- Google Meterials -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/bootstrap.css">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <div class="main-app d-flex">
+    <nav class="sidebar d-flex flex-column justify-content-between bg-light">
+      <ul class="sidebar__menu fw-bold">
+
+        <h1 class="mb-3">
+          <a href="./index.html">
+            <img src="./assets/images/logo-ANSWER.svg" alt="logo">
+          </a>
+        </h1>
+
+        <li class="sidebar__item mb-3">
+          <a href="#" class="pt-2 pb-2 link-secondary link-dark">
+            <span class="material-icons d-inline-block me-4">
+              assessment
+            </span>Dashboard
+          </a>
+        </li>
+        <li class="sidebar__item mb-3">
+          <a href="#" class="me-4 pt-2 pb-2 link-dark">
+            <span class="material-icons d-inline-block me-4">
+              question_answer
+            </span>Question
+          </a>
+        </li>
+        <li class="sidebar__item mb-3">
+          <a href="./index.html" class="me-4 pt-2 pb-2 link-dark"><span class="material-icons d-inline-block me-4">
+              assignment
+            </span>Assignment
+          </a>
+        </li>
+        <li class="sidebar__item mb-3">
+          <a href="#" class="me-4 pt-2 pb-2 link-dark">
+            <span class="material-icons d-inline-block me-4">
+              smart_display
+            </span>Course
+          </a>
+        </li>
+        <li class="sidebar__item mb-3">
+          <a href="./admin.html" class="me-4 pt-2 pb-2 link-dark"><span class="material-icons d-inline-block me-4">
+              people_alt
+            </span>Admin
+          </a>
+        </li>
+        <li class="sidebar__item mb-3">
+          <a href="#" class="me-4 pt-2 pb-2 link-dark">
+            <span class="material-icons  d-inline-block me-4">
+              settings
+            </span>Settings
+          </a>
+        </li>
+      </ul>
+      <div class="sidebar__author d-flex align-items-center">
+        <div class="rounded-circle sidebar__author-img"></div>
+        <ul class="sidebar__author-info ms-3">
+          <li class="fw-bold text-dark">Andy Chen</li>
+          <li><a href="mailto:andy0401@email.com" type="email" class="link-dark">andy0401@email.com</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      
 <header class="header p-8">
   <div class="container d-flex justify-content-between">
     <div class="header__caption d-flex align-items-center">
@@ -434,3 +510,11 @@ current: index
     </nav>
   </div>
 </div>
+    </main>
+  </div>
+
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
