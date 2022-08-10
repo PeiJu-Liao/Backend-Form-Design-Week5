@@ -1,0 +1,46 @@
+// customize variables
+$primary: #198754;
+$border-color: #CED4DA;
+
+// pagination 
+$pagination-border-color: #198754;
+
+$pagination-hover-color: #fff;
+$pagination-hover-bg: #198754;
+$pagination-hover-border-color: #198754;
+
+$pagination-active-color: #fff;
+$pagination-active-bg: #198754;
+
+// form select
+$form-select-border-color: #212529;
+// form check and radios
+$form-check-input-border: 1px solid #000;
+$form-label-margin-bottom: 0.25rem;
+$input-border-radius: 2px;
+$input-border-color: transparent;
+$input-font-size: 16px;
+$input-focus-border-color: #198754;
+$input-focus-box-shadow: #147246a4;
+
+// spacer
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer * 0.75,
+  4: $spacer,
+  5: $spacer * 1.25,
+);
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "./variables";
+
+$custom-theme-colors: (
+  "light-400": #CED4DA,
+  "purple": rgb(92, 73, 128),
+);
+$theme-colors: map-merge($theme-colors , $custom-theme-colors);
+
+@import "../../../../node_modules/bootstrap/scss/bootstrap";

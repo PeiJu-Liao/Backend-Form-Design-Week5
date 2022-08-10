@@ -1,0 +1,93 @@
+.qaPart {
+  &__collection {
+    max-width: 20rem;
+    width: 100%;
+  }
+
+  &__item {
+
+    &:hover,
+    &.active {
+      background-color: $gray-100;
+    }
+  }
+
+  &__details {
+    max-width: 36.5rem;
+    width: 100%;
+  }
+
+  &__caption {
+    a:hover {
+      @include hoverStyle($color-primary, 1.5);
+    }
+  }
+
+  &__icons {
+    & a:hover {
+      @include hoverStyle($color-primary, 1.5);
+    }
+  }
+
+  &__student,
+  &__teacher {
+
+    &-imgS,
+    &-imgT {
+      min-width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    &-file {
+      &:hover {
+        box-shadow: 2px 4px 8px $gray-600;
+      }
+    }
+
+    &-imgS {
+      background: url('../../../assets/images/emilywang.jpeg') center / cover;
+    }
+
+    &-imgT {
+      background: url('../../../assets/images/andychen.jpeg') center/ cover;
+    }
+
+    &-content {
+      font-size: 0.875rem; //14px
+    }
+
+    &-comment {
+      & li {
+        text-indent: 1rem;
+      }
+    }
+  }
+
+  // reply.html
+  &__replyEdit {
+    height: 3.5rem;
+    line-height: 3.5rem;
+
+    &-style {
+      li {
+        & a:hover {
+          @include hoverStyle($color-primary, 1.5);
+        }
+      }
+    }
+
+    &-content {
+      height: 16.4375rem;
+    }
+  }
+}
+
+.next {
+  &__arrows {
+    li {
+      & a:hover {
+        @include hoverStyle($color-primary, 1.5);
+      }
+    }
+  }
+}

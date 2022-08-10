@@ -1,0 +1,436 @@
+---
+title: Admin
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<header class="header p-8">
+  <div class="container d-flex justify-content-between">
+    <div class="header__caption d-flex align-items-center">
+      <h2 class="fw-bold text-dark mr-4">Admin</h2>
+      <p class="fw-bold">
+        <span class="adminPlus text-success material-icons mr-2 align-bottom">
+          add
+        </span>Add New Admin
+      </p>
+    </div>
+    <ul class="header__menu d-flex">
+      <li class=" header__item mr-6">
+        <a href="#" class="link-dark">
+          <span class="material-icons">
+            search
+          </span>
+        </a>
+      </li>
+      <li class="header__item">
+        <a href="#" class="link-dark">
+          <span class="material-icons">
+            notifications_active
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<div class="admin">
+  <div class="container">
+    <!-- table表格 -->
+    <table class="table table-hover">
+      <thead>
+        <tr class="border-bottom border-2 border-dark">
+          <th class="fw-bold" scope="col">ID
+            <span class="text-success material-symbols-outlined align-text-top">
+              arrow_downward
+            </span>
+          </th>
+          <th class="fw-bold" scope="col">Name</th>
+          <th class="fw-bold" scope="col">Email</th>
+          <th class="fw-bold" scope="col">Verified</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <!-- #1 -->
+        <tr class="border-bottom">
+          <th scope="row">#1</th>
+          <td>Emir Wicks</td>
+          <td>emir.wicks@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons mr-6" data-bs-toggle="modal" data-bs-target="#modalView">
+                visibility
+              </span>
+            </a>
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons" data-bs-toggle="modal" data-bs-target="#modalEdit">
+                edit
+              </span>
+            </a>
+          </td>
+        </tr>
+
+        <!-- Modal-view -->
+        <div class="modal admin__modalView" id="modalView" tabindex="-1" aria-labelledby="modalView" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-8">
+              <div class="row">
+                <div class="col-auto">
+                  <img src="./assets/images/emir.jpeg" alt="viewer1" class="col admin__modalView-img rounded">
+                </div>
+                <div class="col">
+                  <div class="d-flex">
+                    <p class="me-auto">#1</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <p>Admin</p>
+                  <h4 class="fw-bold fs-4">Emir Wicks</h4>
+                  <p class="text-secondary">emir.wicks@mail.com</p>
+
+                  <div class="d-flex justify-content-between align-items-center mt-4">
+                    <div class="admin__modalView-verified bg-light text-dark py-1 px-2">Verified
+                    </div>
+                    <!-- collapse target -->
+                    <a class="link-success" data-bs-toggle="collapse" href="#adminViwerCollapse" role="button"
+                      aria-expanded="false" aria-controls="adminViwerCollapse">
+
+                      <!-- 下拉icon -->
+                      <span class="material-icons expand-more">
+                        expand_more
+                      </span>
+                      <!-- 上縮icon -->
+                      <span class="material-icons expand-less">
+                        expand_less
+                      </span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Collapse(Modal-view-expand) -->
+                <div class="collapse" id="adminViwerCollapse">
+                  <div class="d-flex justify-content-end  pt-8">
+                    <a href="#" role="button" class="btn btn-outline-danger mr-1 pt-2 px-8 fw-bold">
+                      Deactivate
+                    </a>
+                    <a href="#" role="button" class="btn btn-success pt-2 px-8">
+                      Edit
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Edit -->
+        <div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="modalEdit" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content p-8">
+
+              <div class="d-flex justify-content-between mb-8">
+                <h4 class="modal-title fs-4 fw-bold" id="modalEdit">Edit Admin</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="border-bottom mb-6">
+                <h5 class="fs-5 fw-bold mb-4">Account</h5>
+                <form action="">
+                  <div class="mb-4">
+                    <label for="inputName" class="form-label">Name</label>
+                    <input type="text" class="form-control form-control bg-light py-4" id="inputName"
+                      aria-describedby="user-name" value="Emir Wicks">
+                  </div>
+                  <div class="mb-6">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control form-control bg-light py-4" id="inputEmail"
+                      aria-describedby="user-email" value="emir.wocks@mail.com">
+                  </div>
+                </form>
+              </div>
+              <!-- Verified -->
+              <div class="border-bottom mb-6">
+                <h5 class="fs-5 fw-bold mb-4">Verification</h5>
+                <div class="d-flex justify-content-between mb-4">
+                  <p class="fw-bold">
+                    <span class="material-icons align-text-top text-success">
+                      check_circle
+                    </span>
+                    Verified
+                  </p>
+                  <time class="d-block">2020/04/12</time>
+                </div>
+                <div class="border mb-4 py-4">
+                  <p class="text-light-400 text-center">Send Verification Email</p>
+                </div>
+              </div>
+              <div class="border-bottom mb-6">
+                <h5 class="fs-5 fw-bold mb-4">Access Level</h5>
+                <select class="form-select form-select py-4" aria-label="Default select example">
+                  <option selected>Admin</option>
+                  <option value="1">Admin#1</option>
+                  <option value="2">Admin#2<ption>
+                  <option value="3">Admin#3</option>
+                </select>
+              </div>
+              <!-- check and radios -->
+              <div class="border-bottom mb-6">
+                <h5 class="fs-5 fw-bold mb-4">Custom Access</h5>
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Lecture
+                  </label>
+                </div>
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Coupon
+                  </label>
+                </div>
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Message
+                  </label>
+                </div>
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Setting
+                  </label>
+                </div>
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Task Menu
+                  </label>
+                </div>
+              </div>
+
+              <!-- Deactive Access -->
+              <div>
+                <h5 class="fs-5 fw-bold mb-4">Deactivate Access</h5>
+                <p class="text-danger mb-4">
+                  <span class="material-icons align-text-top">
+                    warning
+                  </span>
+                  This cannot be undone!
+                </p>
+                <div class="d-grid mb-12">
+                  <button class="btn btn-outline-danger fw-bold fs-6 btn-lg p-4" type="button">
+                    Deactivate This Account</button>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <button type="button" class="btn btn-outline-success fw-bold mr-4 py-2 px-8"
+                    data-bs-dismiss="modal">Cancle</button>
+                  <button type="button" class="btn btn-success fw-bold py-2 px-8">Update</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- #2 -->
+        <tr class=" border-bottom">
+          <th scope="row">#2</th>
+          <td>Zaina Goldsmith</td>
+          <td>zaina.goldsmith@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons mr-6">
+                visibility
+              </span>
+            </a>
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons">
+                edit
+              </span>
+            </a>
+          </td>
+        </tr>
+        <!-- #3 -->
+        <tr class="border-bottom">
+          <th scope="row">#3</th>
+          <td>Mahima Lopez</td>
+          <td>mahima.lopez@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons mr-6">
+                visibility
+              </span>
+            </a>
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons">
+                edit
+              </span>
+            </a>
+          </td>
+        </tr>
+        <!-- #4 -->
+        <tr class="border-bottom">
+          <th scope="row">#4</th>
+          <td>Pharrell Murray</td>
+          <td>pharrell.murray@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons mr-6">
+                visibility
+              </span>
+            </a>
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons">
+                edit
+              </span>
+            </a>
+          </td>
+        </tr>
+        <!-- #5 -->
+        <tr class="border-bottom">
+          <th scope="row">#5</th>
+          <td>Annika Mcbride</td>
+          <td>annika.mcbride@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons mr-6">
+                visibility
+              </span>
+            </a>
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons">
+                edit
+              </span>
+            </a>
+          </td>
+        </tr>
+        <!-- #6 -->
+        <tr class="border-bottom">
+          <th scope="row">#6</th>
+          <td>Fatimah Clark</td>
+          <td>fatimah.clark@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons mr-6">
+                visibility
+              </span>
+            </a>
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons">
+                edit
+              </span>
+            </a>
+          </td>
+        </tr>
+        <!-- #7 -->
+        <tr class="border-bottom">
+          <th scope="row">#7</th>
+          <td>Klaudia Rhodes</td>
+          <td>klaudia.rhodes@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons mr-6">
+                visibility
+              </span>
+            </a>
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons">
+                edit
+              </span>
+            </a>
+          </td>
+        </tr>
+        <!-- #8 -->
+        <tr class="border-bottom">
+          <th scope="row">#8</th>
+          <td>Tillie Lucero</td>
+          <td>tillie.lucero@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons mr-6">
+                visibility
+              </span>
+            </a>
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons">
+                edit
+              </span>
+            </a>
+          </td>
+        </tr>
+        <!-- #9 -->
+        <tr class="border-bottom">
+          <th scope="row">#9</th>
+          <td>Sabrina Stephenson</td>
+          <td>sabrina.stephenson@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons mr-6">
+                visibility
+              </span>
+            </a>
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons">
+                edit
+              </span>
+            </a>
+          </td>
+        </tr>
+        <!-- #10 -->
+        <tr class="border-bottom">
+          <th scope="row">#10</th>
+          <td>Annie Smith</td>
+          <td>annie.smith@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons mr-6">
+                visibility
+              </span>
+            </a>
+            <a href="#" class="d-inline-block link-dark align-text-top">
+              <span class="material-icons">
+                edit
+              </span>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- pagination分頁 -->
+    <nav aria-label="Page navigation example" class="page">
+      <ul class="pagination justify-content-end">
+        <li class="page-item">
+          <a class="page-link link-success" href="#" aria-label="Previous">
+            <span class="material-icons">
+              chevron_left
+            </span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link link-dark" href="#">1</a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link link-dark" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link link-dark" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link link-success" href="#" aria-label="Next">
+            <span class="material-icons">
+              navigate_next
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

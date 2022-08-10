@@ -1,0 +1,29 @@
+.admin {
+  .text-end {
+    a:hover {
+      @include hoverStyle($color-primary, 1.1);
+    }
+  }
+
+  .table {
+    margin-bottom: 3.9375rem;
+  }
+
+  // bootstrap Modal
+  &__modalView {
+    &-img {
+      max-width: 8.8125rem;
+      height: 8.8125rem;
+    }
+  }
+
+}
+
+// pagination
+.page {
+  margin-bottom: 2rem;
+
+  span {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,15 @@
+.header {
+  &__item {
+    & a:hover {
+      @include hoverStyle($color-primary, 1.5);
+    }
+  }
+
+  .adminPlus {
+    cursor: pointer;
+
+    &:hover {
+      @include hoverStyle($color-primary, 1.5);
+    }
+  }
+}
