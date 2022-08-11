@@ -982,35 +982,20 @@ main {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 18.5rem;
           flex: 0 0 18.5rem;
+}
+
+.sidebar__menu {
   padding: 2rem;
+  margin-left: -2rem;
 }
 
 .sidebar__item {
-  height: 2rem;
+  padding-left: 2rem;
   position: relative;
 }
 
 .sidebar__item span {
   vertical-align: bottom;
-}
-
-.sidebar__item a::after {
-  content: '';
-  width: 0%;
-  position: absolute;
-  bottom: -0.5rem;
-  left: 0;
-  height: 2px;
-  background: #198754;
-  -webkit-transition-property: width;
-  -o-transition-property: width;
-  transition-property: width;
-  -webkit-transition-duration: 0.5s;
-       -o-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease-in-out;
-       -o-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
 }
 
 .sidebar__item:hover a:-webkit-any-link, .sidebar__item.active a:-webkit-any-link {
@@ -1025,8 +1010,13 @@ main {
   color: #198754;
 }
 
-.sidebar__item:hover a::after, .sidebar__item.active a::after {
-  width: 85%;
+.sidebar__item:hover::before, .sidebar__item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 0.5rem;
+  height: 2rem;
+  border-left: 4px solid #198754;
 }
 
 .sidebar__author-img {
