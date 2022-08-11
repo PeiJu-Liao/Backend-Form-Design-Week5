@@ -1,26 +1,17 @@
 .sidebar {
   flex: 0 0 18.5rem;
-  padding: 2rem;
+
+  &__menu {
+    padding: 2rem;
+    margin-left: -2rem;
+  }
 
   &__item {
-    height: 2rem;
+    padding-left: 2rem;
     position: relative;
 
     span {
       vertical-align: bottom;
-    }
-
-    & a::after {
-      content: '';
-      width: 0%;
-      position: absolute;
-      bottom: -0.5rem;
-      left: 0;
-      height: 2px;
-      background: $color-primary;
-      transition-property: width;
-      transition-duration: 0.5s;
-      transition-timing-function: ease-in-out;
     }
 
     &:hover,
@@ -29,11 +20,15 @@
         color: $color-primary;
       }
 
-      & a::after {
-        width: 85%;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 0.5rem;
+        height: 2rem;
+        border-left: 4px solid $color-primary;
       }
     }
-
   }
 
   &__author {
