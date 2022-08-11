@@ -1080,10 +1080,6 @@ main {
   width: 100%;
 }
 
-.qaPart__item:hover, .qaPart__item.active {
-  background-color: #f8f9fa;
-}
-
 .qaPart__details {
   max-width: 36.5rem;
   width: 100%;
